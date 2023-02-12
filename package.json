@@ -1,0 +1,47 @@
+{
+  "name": "keisanmeiro",
+  "version": "1.0.0",
+  "main": "",
+  "author": "tool.sincha",
+  "license": "MIT",
+  "scripts": {
+    "cleanup": "npx rimraf ./public",
+    "dev": "npm run webpack:dev && npm run webpack:server",
+    "webpack:server": "npx webpack serve --config ./config/webpack.dev.js",
+    "webpack:dev": "npm run cleanup && npx webpack --config ./config/webpack.dev.js",
+    "build": "npm run cleanup && npx webpack --config ./config/webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^6.0.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.1.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "phaser": "^3.55.2",
+    "postcss-loader": "^6.1.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.35.2",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.1.0",
+    "terser-webpack-plugin": "^5.1.4",
+    "webpack": "^5.44.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpack-merge": "^5.8.0",
+    "webpack-nano": "^1.1.1"
+  },
+  "dependencies": {
+    "core-js": "3",
+    "regenerator-runtime": "^0.13.7",
+    "webpack-pwa-manifest": "^4.3.0",
+    "workbox-sw": "^6.1.5",
+    "workbox-webpack-plugin": "^6.1.5"
+  }
+}
