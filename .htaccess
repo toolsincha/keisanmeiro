@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^(.*)$ $1../v3_0_7 [L]
+</IfModule>
